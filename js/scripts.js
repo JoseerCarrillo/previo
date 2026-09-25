@@ -21,3 +21,33 @@ document.addEventListener("DOMContentLoaded", function(){
         });
     }
 });
+
+const drawProductos = async (data)=>{
+    const divProduc = document.getElementById('contproduct');
+    divProduc.innerHTML = "";
+    data.forEach(products => console.log(products));
+}
+
+
+const printProduct = (data) =>{
+    const divProduc = document.getElementById('contproduct');
+    const miArticulo = document.createElement('article');
+
+    const miImagen = document.createElement('img');
+    miImagen.src = data.image;
+    miArticulo.appendChild(miArticulo);
+
+    const titulo = document.createElement('h2');
+    titulo.textContent = data.title;
+    miArticulo.appendChild(titulo);
+
+    const precio = document.createElement('p');
+    precio.textContent = data.price;
+    miArticulo.appendChild(price);
+
+
+    divProduc.appendChild(miArticulo);
+    console.log(data);
+}
+
+getProducts('').then(data => drawProductos(data));
