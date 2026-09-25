@@ -61,7 +61,7 @@ header {
     text-align: center;
 }
 
-article {
+#contproduct, article {
  background: white;
  padding: 20px;
  border-radius: 8px;
